@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scryfall.OpenApi.Codegen", "src\Scryfall.OpenApi.Codegen\Scryfall.OpenApi.Codegen.csproj", "{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3AE7F04-E474-46A7-A24A-0E16E0731044}"
+	ProjectSection(SolutionItems) = preProject
+		scryfall-openapi\openapi.yml = scryfall-openapi\openapi.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scryfall.Api", "src\Scryfall.Api\Scryfall.Api.csproj", "{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|x64.Build.0 = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|x64.ActiveCfg = Release|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|x64.Build.0 = Release|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}.Release|x86.Build.0 = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|x64.Build.0 = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|x64.ActiveCfg = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|x64.Build.0 = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A552B1B-6689-42C6-A5FA-5CA183C1635E}
+	EndGlobalSection
+EndGlobal
