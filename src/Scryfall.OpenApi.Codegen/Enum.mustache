@@ -1,0 +1,13 @@
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
+
+namespace Scryfall.Api {
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum {{typeName}}
+    {
+        {{#elements}}
+        [EnumMember(Value="{{rawName}}")] {{name}},
+        {{/elements}}
+    }
+}

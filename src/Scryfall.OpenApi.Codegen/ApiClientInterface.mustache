@@ -1,0 +1,14 @@
+﻿using System;
+using System.Threading.Tasks;
+
+namespace Scryfall.Api
+{
+    public interface IApiClient : IDisposable
+    {
+        {{#operations}}
+        /// <summary>{{summary}}</summary>
+        /// <remarks>{{description}}</remarks>
+        Task<{{returnType}}> {{name}}({{parameters}});
+        {{/operations}}
+    }
+}

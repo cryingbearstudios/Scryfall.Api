@@ -1,0 +1,31 @@
+﻿using System;
+using System.IO;
+using System.Collections.Specialized;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
+
+namespace Scryfall.Api
+{
+    public partial class ApiClient : IApiClient
+    {
+        private readonly Uri _baseUri = new Uri("{{baseUrl}}");
+
+        {{#operations}}
+        /// <summary>{{summary}}</summary>
+        /// <remarks>{{description}}</remarks>
+        {{#parameters}}
+        /// <param name="{{value}}">{{summary}}</param>
+        {{/parameters}}
+        public Task<{{returnType}}> {{name}}({{parametersString}})
+        {
+            return SendRequest<{{returnType}}>(HttpMethod.{{operationType}}, "{{path}}", new NameValueCollection
+            {
+                {{#parameters}}
+                { "{{key}}", {{value}}.ToString() },
+                {{/parameters}}
+            });
+        }
+        {{/operations}}
+    }
+}

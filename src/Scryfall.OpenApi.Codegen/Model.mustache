@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+namespace Scryfall.Api
+{
+    [DataContract]
+    public partial class {{modelName}}{{inheritance}}
+    {
+        {{#properties}}
+        /// <summary>{{description}}</summary>
+        [DataMember(Name="{{rawName}}", EmitDefaultValue={{nullable}})]
+        public {{returnType}} {{propertyName}} {get; set;}
+        {{/properties}}
+    }
+}
