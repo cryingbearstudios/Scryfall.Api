@@ -5,12 +5,15 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scryfall.OpenApi.Codegen", "src\Scryfall.OpenApi.Codegen\Scryfall.OpenApi.Codegen.csproj", "{EA7B5F4D-F8FD-4349-821A-0F46CE4C0D96}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3AE7F04-E474-46A7-A24A-0E16E0731044}"
-	ProjectSection(SolutionItems) = preProject
-		..\scryfall-openapi\openapi.yml = ..\scryfall-openapi\openapi.yml
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scryfall.Api", "src\Scryfall.Api\Scryfall.Api.csproj", "{CDC18FA4-E6F1-495B-B20E-78F7E7E8F2B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6409A7E1-1458-4B0C-BC5A-FEFD74B4B434}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		build.ps1 = build.ps1
+		openapi.yml = openapi.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
