@@ -790,6 +790,7 @@ components:
         - penny
         - commander
         - duel
+        - pioneer
     legal_status:
       enum:
         - legal
