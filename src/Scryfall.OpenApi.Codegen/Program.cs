@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using HandlebarsDotNet;
 using Microsoft.OpenApi.Models;
@@ -12,10 +12,9 @@ namespace Scryfall.OpenApi.Codegen
         {
             SetWorkingDirectoryToProjectRoot();
             Handlebars.Configuration.TextEncoder = new PassthroughEncoder();
-            var openApiYaml = Path.Combine("..", "scryfall-openapi", "openapi.yml");
             OpenApiDocument document;
             Console.WriteLine("Loading OpenApi YAML");
-            using (var stream = File.OpenRead(openApiYaml))
+            using (var stream = File.OpenRead("openapi.yml"))
             {
                 var reader = new OpenApiStreamReader();
                 document = reader.Read(stream, out _);
