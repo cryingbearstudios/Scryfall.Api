@@ -1278,15 +1278,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/card_symbol'
-    bulk_data_type:
-      type: string
-      description: A computer-readable string for the kind of bulk item.
-      example: all_cards
-      enum:
-        - all_cards
-        - default_cards
-        - oracle_cards
-        - rulings
     bulk_data:
       type: object
       properties:
@@ -1296,7 +1287,7 @@ components:
           description: A unique ID for this bulk item.
           example: 922288cb-4bef-45e1-bb30-0c2bd3d3534f
         type:
-          $ref: "#/components/schemas/bulk_data_type"
+          type: string
         name:
           type: string
           description: A human-readable name for this file.
