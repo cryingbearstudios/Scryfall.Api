@@ -15,7 +15,7 @@ namespace Scryfall.OpenApi.Codegen
         protected override string TemplateName { get; } = "Enum";
 
         private IEnumerable<KeyValuePair<string, OpenApiSchema>> Enums =>
-            Document.Components.Schemas.Where(pair => pair.Value.Type == "string" && pair.Value.Enum.Any());
+            Document.Components.Schemas.Where(pair => pair.Value.Type == "string" && pair.Value.Enum.Count > 0);
 
         public void Render()
         {

@@ -25,12 +25,16 @@ namespace Scryfall.OpenApi.Codegen
 
                 var propertiesSchema = schema;
                 string inheritance = null;
-                if (schema.AllOf != null && schema.AllOf.Count > 0)
+                if (schema.AllOf?.Count > 0)
+                {
                     foreach (var baseSchema in schema.AllOf)
+                    {
                         if (baseSchema.Reference != null)
                             inheritance = $" : {baseSchema.Reference.Id.Pascalize()}";
                         else
                             propertiesSchema = baseSchema;
+                    }
+                }
 
                 WriteCsFile(modelName, new {
                     modelName,

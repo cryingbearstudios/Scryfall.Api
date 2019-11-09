@@ -25,22 +25,22 @@ namespace Scryfall.Api
 
         private async Task<T> SendRequest<T>(HttpMethod method, string path, NameValueCollection query)
         {
-            await _rateLimitingTask;
+            await _rateLimitingTask.ConfigureAwait(false);
             var requestUri = new UriBuilder(_baseUri) {Path = path, Query = query.ToString()}.Uri;
             var request = new HttpRequestMessage {Method = method, RequestUri = requestUri};
-            var response = await _client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+            var response = await _client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
             _rateLimitingTask = Task.Delay(RateLimitDelayMilliseconds);
 
             if (response.IsSuccessStatusCode)
-                return await ReadContentAsJson<T>(response);
+                return await ReadContentAsJson<T>(response).ConfigureAwait(false);
 
-            var scryfallError = await ReadContentAsJson<Error>(response);
+            var scryfallError = await ReadContentAsJson<Error>(response).ConfigureAwait(false);
             throw scryfallError;
         }
 
         private async Task<T> ReadContentAsJson<T>(HttpResponseMessage response)
         {
-            var stream = await response.Content.ReadAsStreamAsync();
+            var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
             using (var reader = new JsonTextReader(new StreamReader(stream)))
                 return _serializer.Deserialize<T>(reader);
         }

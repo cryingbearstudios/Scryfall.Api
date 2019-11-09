@@ -44,7 +44,7 @@ namespace Scryfall.OpenApi.Codegen
                 returnType = OperationReturnType(operation),
                 name = operation.OperationId.Pascalize(),
                 parametersString = string.Join(", ", parameters.Select(p => p.Declaration)),
-                operationType, 
+                operationType,
                 path,
                 parameters,
             };
