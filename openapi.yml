@@ -899,6 +899,8 @@ components:
               type: integer
             mtgo_foil_id:
               type: integer
+            tcgplayer_id:
+              type: integer
             uri:
               format: uri
               type: string
