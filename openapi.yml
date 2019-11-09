@@ -709,24 +709,6 @@ paths:
           $ref: '#/components/responses/error'
 components:
   schemas:
-    layout_type:
-      enum:
-      - normal
-      - split
-      - flip
-      - transform
-      - meld
-      - leveler
-      - saga
-      - planar
-      - scheme
-      - vanguard
-      - token
-      - double_faced_token
-      - emblem
-      - augment
-      - host
-      type: string
     rarity:
       enum:
         - common
@@ -914,7 +896,7 @@ components:
               format: uri
               type: string
             layout:
-              $ref: "#/components/schemas/layout_type"
+              type: string
             cmc:
               format: double
               type: number
