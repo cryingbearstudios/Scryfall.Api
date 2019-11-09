@@ -745,19 +745,6 @@ components:
         - R
         - G
       type: string
-    legality_format:
-      type: string
-      enum:
-        - standard
-        - future
-        - modern
-        - legacy
-        - pauper
-        - vintage
-        - penny
-        - commander
-        - duel
-        - pioneer
     legal_status:
       enum:
         - legal
@@ -765,15 +752,6 @@ components:
         - restricted
         - banned
       type: string
-    image_uri_type:
-      type: string
-      enum:
-        - small
-        - normal
-        - large
-        - png
-        - art_crop
-        - border_crop
     card:
       type: object
       allOf:
@@ -833,8 +811,6 @@ components:
                 $ref: '#/components/schemas/card_face'
             legalities:
               type: object
-              x-dictionary-key:
-                $ref: '#/components/schemas/legality_format'
               additionalProperties:
                 $ref: '#/components/schemas/legal_status'
             reserved:
@@ -930,8 +906,6 @@ components:
           type: string
         image_uris:
           type: object
-          x-dictionary-key:
-            $ref: '#/components/schemas/image_uri_type'
           additionalProperties:
             type: string
             format: uri
