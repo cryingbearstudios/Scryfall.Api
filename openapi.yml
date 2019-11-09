@@ -737,14 +737,6 @@ components:
         - auto
         - asc
         - desc
-    color:
-      enum:
-        - W
-        - U
-        - B
-        - R
-        - G
-      type: string
     card:
       type: object
       allOf:
@@ -793,7 +785,7 @@ components:
             color_identity:
               type: array
               items:
-                $ref: '#/components/schemas/color'
+                type: string
             all_parts:
               type: array
               items:
@@ -875,11 +867,11 @@ components:
         colors:
           type: array
           items:
-            $ref: '#/components/schemas/color'
+            type: string
         color_indicator:
           type: array
           items:
-            $ref: '#/components/schemas/color'
+            type: string
         power:
           type: string
         toughness:
@@ -1097,7 +1089,7 @@ components:
         funny:
           type: boolean
         colors:
-          $ref: '#/components/schemas/color'
+          type: string
     mana_cost:
       type: object
       properties:
@@ -1107,7 +1099,7 @@ components:
           format: double
           type: number
         colors:
-          $ref: '#/components/schemas/color'
+          type: string
         colorless:
           type: boolean
         monocolored:
