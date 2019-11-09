@@ -737,14 +737,6 @@ components:
         - auto
         - asc
         - desc
-    border_color:
-      enum:
-        - black
-        - borderless
-        - gold
-        - silver
-        - white
-      type: string
     color:
       enum:
         - W
@@ -878,7 +870,13 @@ components:
             watermark:
               type: string
             border_color:
-              $ref: "#/components/schemas/border_color"
+              enum:
+                - black
+                - borderless
+                - gold
+                - silver
+                - white
+              type: string
             story_spotlight_number:
               type: integer
             story_spotlight_uri:
