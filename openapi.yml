@@ -745,13 +745,6 @@ components:
         - R
         - G
       type: string
-    legal_status:
-      enum:
-        - legal
-        - not_legal
-        - restricted
-        - banned
-      type: string
     card:
       type: object
       allOf:
@@ -812,7 +805,7 @@ components:
             legalities:
               type: object
               additionalProperties:
-                $ref: '#/components/schemas/legal_status'
+                type: string
             reserved:
               type: boolean
             edhrec_rank:
