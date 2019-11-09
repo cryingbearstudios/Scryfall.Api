@@ -19,7 +19,7 @@ namespace Scryfall.Api
         {{/parameters}}
         public Task<{{returnType}}> {{name}}({{parametersString}})
         {
-            return SendRequest<{{returnType}}>(HttpMethod.{{operationType}}, "{{path}}", new NameValueCollection
+            return SendRequest<{{returnType}}>(HttpMethod.{{operationType}}, $"{{path}}", new NameValueCollection
             {
                 {{#parameters}}
                 { "{{key}}", {{value}}.ToString() },
