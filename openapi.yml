@@ -1042,21 +1042,11 @@ components:
             cards in this set.
           example: >-
             https://api.scryfall.com/cards/search?order=set&q=e%3Aaer&unique=prints
-    ruling_source:
-      type: string
-      description: >-
-        A computer-readable string indicating which company produced this
-        ruling.
-      enum:
-        - wotc
-        - scryfall
-      example: wotc
-
     ruling:
       type: object
       properties:
         source:
-          $ref: "#/components/schemas/ruling_source"
+          type: string
         published_at:
           format: date
           type: string
